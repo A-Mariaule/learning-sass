@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 320px;
+  height: 430px;
+  background-color: white;
+  box-shadow: 1px 0px 3px 0px rgba(117, 112, 112, 0.76);
+  overflow: hidden;
+}
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card:hover .card__img {
+  transform: scale(1.2);
+  opacity: 0.6;
+}
+.card:hover .card__text {
+  transform: translateY(-20px);
+}
+.card:hover .card__text--paragraph {
+  display: block;
+}
+.card__img {
+  transition-duration: 1s;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/festival-liberte-metisse-modified.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card__date {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F94504;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  align-self: flex-end;
+  border-radius: 50%;
+  margin: 20px 20px 0 0;
+}
+.card__date p {
+  color: white;
+}
+.card__text {
+  transition-duration: 1s;
+  padding: 30px;
+  align-self: flex-start;
+  background-color: white;
+  width: 100%;
+  margin: 0;
+}
+.card__text--block {
+  transition-duration: 1s;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #F94504;
+  padding: 10px 15px;
+  position: relative;
+  top: -50px;
+  right: 20px;
+  z-index: 1;
+  margin: 0;
+}
+.card__text--block p {
+  display: block;
+  color: white;
+  text-transform: uppercase;
+}
+.card__text h1 {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 25px;
+  margin: 0;
+}
+.card__text h2 {
+  font-weight: normal;
+  white-space: nowrap;
+  font-size: 22px;
+  color: #F94504;
+  margin: 0;
+}
+.card__text--paragraph {
+  text-align: justify;
+  opacity: 0.6;
+  display: none;
+  color: black;
+  margin: 0px 30px 0px 0px;
+  padding: 0px 30px 20px 0;
+}
+.card__footer {
+  align-self: flex-start;
+  margin: 0 0 20px 30px;
+  padding: 0;
+  width: 70%;
+}
+.card__footer ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+.card__footer li {
+  margin-right: 15px;
+  opacity: 0.5;
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position: left;
+  text-align: right;
+}
+.card__footer--time {
+  background-image: url("assets/lhorloge.png");
+  width: 40%;
+}
+.card__footer--msg {
+  background-image: url("assets/option-de-commentaire-de-bulles.png");
+  width: 45%;
+}/*# sourceMappingURL=style.css.map */

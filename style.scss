@@ -1,0 +1,155 @@
+$color-main: #F94504;
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 320px;
+    height: 430px;
+    background-color: white;
+    box-shadow: 1px 0px 3px 0px rgba(117,112,112,0.76);
+    overflow: hidden;
+
+    &:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    &:hover &__img{
+        transform: scale(1.2);
+        opacity: 0.6;
+    }
+    &:hover &__text{
+        transform: translateY(-20px);
+        &--paragraph{
+            display: block;
+            
+        }
+    }
+
+    &__img{
+    transition-duration: 1s;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/festival-liberte-metisse-modified.png");
+    background-position: center ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+    &__date{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-main;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        align-self: flex-end;
+        border-radius: 50%;
+        margin: 20px 20px 0 0;
+    
+        p{
+            color: white;
+            
+        }
+    }        
+    &__text{
+        transition-duration: 1s;
+        padding: 30px;
+        align-self: flex-start;
+        background-color: white;
+        width: 100%;
+        margin: 0;
+
+        &--block{
+            transition-duration: 1s;
+            width: fit-content;
+            background-color: $color-main;
+            padding: 10px 15px;
+            position: relative;
+            top:-50px;
+            right: 20px;
+            z-index: 1;
+            margin: 0;
+            p{
+                display: block;
+                color: white;
+                text-transform: uppercase;
+            }
+        }
+    
+        h1{
+            font-weight: normal;
+            text-transform: uppercase;
+            font-size: 25px;
+            margin: 0 ;
+           
+        }
+        h2{
+            font-weight: normal;
+            white-space: nowrap;
+            font-size: 22px;
+            color: $color-main;
+            margin: 0 ;
+
+
+        }
+
+        &--paragraph{
+            text-align: justify;
+            opacity: 0.6;
+            display: none;
+            color: black;
+            margin: 0px 30px 0px 0px;
+            padding: 0px 30px 20px 0;
+        }
+    }
+    &__footer{
+        align-self: flex-start;
+        margin:0 0 20px 30px;
+        padding:0 ;
+        width: 70%;
+        ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: flex-start;
+            margin:  0;
+            padding: 0;
+                        
+        }
+        li{
+            margin-right: 15px;
+            opacity: 0.5;
+            background-size: 15px 15px ;
+            background-repeat: no-repeat;
+            background-position: left;
+            text-align: right;
+            
+        }
+        &--time{
+            background-image: url("assets/lhorloge.png");
+            width: 40%;
+        }
+        &--msg{
+            background-image: url("assets/option-de-commentaire-de-bulles.png");
+            width: 45%;
+        }
+    }
+}
+
